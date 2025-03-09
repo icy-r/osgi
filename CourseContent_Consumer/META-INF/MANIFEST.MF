@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: CourseContent_Consumer
+Bundle-SymbolicName: CourseContent_Consumer
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: coursecontent_consumer.Activator
+Bundle-RequiredExecutionEnvironment: JavaSE-23
+Automatic-Module-Name: CourseContent.Consumer
+Import-Package: coursecontent_producer,
+ org.osgi.framework;version="1.3.0",
+ javax.swing,
+ java.awt,
+ java.awt.event
+Bundle-ActivationPolicy: lazy
