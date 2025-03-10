@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: LibraryManagement_UserManagement
+Bundle-SymbolicName: LibraryManagement_UserManagement
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: librarymanagement_usermanagement.Activator
+Bundle-RequiredExecutionEnvironment: JavaSE-23
+Automatic-Module-Name: LibraryManagement.UserManagement
+Import-Package: org.osgi.framework;version="1.3.0"
