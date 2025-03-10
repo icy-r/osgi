@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: LibraryManagement_RentalManagement
+Bundle-SymbolicName: LibraryManagement_RentalManagement
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: librarymanagement_rentalmanagement.Activator
+Bundle-RequiredExecutionEnvironment: JavaSE-23
+Automatic-Module-Name: LibraryManagement.RentalManagement
+Import-Package: org.osgi.framework;version="1.3.0"
