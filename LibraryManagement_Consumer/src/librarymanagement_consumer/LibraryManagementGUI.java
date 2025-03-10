@@ -7,6 +7,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.List;
 
 public class LibraryManagementGUI extends JFrame {
 
@@ -70,6 +71,7 @@ public class LibraryManagementGUI extends JFrame {
 		JButton rentButton = new JButton("Rent Book");
 		JButton returnButton = new JButton("Return Book");
 		JButton calculateFeeButton = new JButton("Calculate Due Fee");
+		JButton listAllBooksButton = new JButton("List All Books");
 
 		buttonPanel.add(addButton);
 		buttonPanel.add(updateButton);
@@ -78,6 +80,7 @@ public class LibraryManagementGUI extends JFrame {
 		buttonPanel.add(rentButton);
 		buttonPanel.add(returnButton);
 		buttonPanel.add(calculateFeeButton);
+		buttonPanel.add(listAllBooksButton);
 
 		resultArea = new JTextArea();
 		resultArea.setEditable(false);
@@ -195,6 +198,22 @@ public class LibraryManagementGUI extends JFrame {
 					}
 				} else {
 					resultArea.setText("Please provide both book ID and overdue days");
+				}
+			}
+			});
+
+		listAllBooksButton.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				List<String> allBooks = bookCatalogService.getAllBooks();
+				if (allBooks != null && !allBooks.isEmpty()) {
+					StringBuilder booksList = new StringBuilder("All Books:\n");
+					for (String book : allBooks) {
+						booksList.append(book).append("\n");
+					}
+					resultArea.setText(booksList.toString());
+				} else {
+					resultArea.setText("No books available");
 				}
 			}
 		});
